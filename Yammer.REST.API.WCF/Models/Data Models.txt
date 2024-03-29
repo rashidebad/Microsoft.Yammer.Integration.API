@@ -1,0 +1,575 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Web;
+
+namespace MCKD_YammerWCF.Models
+{
+
+
+    [Serializable]
+    [DataContract]
+    public class ProfileDataResponse
+    {
+        [DataMember]
+        public string Success { get; set; }
+
+        [DataMember]
+        public string MessageEn { get; set; }
+        
+        [DataMember]
+        public ReadEmployeeProfileDataClass[] ReadEmployeeProfileData { get; set; }
+  
+    }
+
+
+    [Serializable]
+    [DataContract]
+    public class ReadEmployeeProfileDataClass
+    {
+        [DataMember]
+        public string EmployeeId { get; set; }
+
+        [DataMember]
+        public string EmployeeNo { get; set; }
+
+        [DataMember]
+        public string EmployeeCardNo { get; set; }
+
+    }
+    
+
+
+    [Serializable]
+    [DataContract]
+    public class Body
+    {
+        [DataMember]
+        public string[] urls { get; set; }
+
+        [DataMember]
+        public string parsed { get; set; }
+
+        [DataMember]
+        public string plain { get; set; }
+
+        [DataMember]
+        public string rich { get; set; }
+    }
+
+
+    [Serializable]
+    [DataContract]
+    public class Announcement
+    {
+        [DataMember]
+        public string id { get; set; }
+        [DataMember]
+        public string sender_id { get; set; }
+
+        [DataMember]
+        public string delegate_id { get; set; }
+        [DataMember]
+
+        public string replied_to_id { get; set; }
+
+        [DataMember]
+        public string created_at { get; set; }
+
+        [DataMember]
+        public string network_id { get; set; }
+
+        [DataMember]
+        public string message_type { get; set; }
+
+        [DataMember]
+        public string sender_type { get; set; }
+
+        [DataMember]
+        public string url { get; set; }
+
+        [DataMember]
+        public string web_url { get; set; }
+
+
+        [DataMember]
+        public string group_id { get; set; }
+
+        [DataMember]
+        public Body body { get; set; }
+
+        [DataMember]
+        public DateTime date { get; set; }
+
+        [DataMember]
+        public string thread_id { get; set; }
+
+        [DataMember]
+        public string client_type { get; set; }
+
+        [DataMember]
+        public string client_url { get; set; }
+
+        [DataMember]
+        public bool system_message { get; set; }
+
+        [DataMember]
+        public bool direct_message { get; set; }
+
+        [DataMember]
+        public string chat_client_sequence { get; set; }
+
+        [DataMember]
+        public string language { get; set; }
+
+        [DataMember]
+        public string[] notified_user_ids { get; set; }
+
+        [DataMember]
+        public string privacy { get; set; }
+
+        [DataMember]
+        public string content_excerpt { get; set; }
+
+        [DataMember]
+        public string group_created_id { get; set; }
+
+        [DataMember]
+        public Attachment[] attachments { get; set; }
+
+        [DataMember]
+        public likedBy liked_by { get; set; }
+
+
+    }
+
+    [Serializable]
+    [DataContract]
+    public class References
+    {
+        [DataMember]
+        public string type { get; set; }
+
+        [DataMember]
+        public string id { get; set; }
+
+        [DataMember]
+        public string name { get; set; }
+
+        [DataMember]
+        public string state { get; set; }
+        [DataMember]
+
+        public string full_name { get; set; }
+
+        [DataMember]
+        public string job_title { get; set; }
+
+        [DataMember]
+        public string network_id { get; set; }
+
+        [DataMember]
+        public string mugshot_url { get; set; }
+
+        [DataMember]
+        public string mugshot_redirect_url { get; set; }
+
+        [DataMember]
+        public string mugshot_url_template { get; set; }
+
+        [DataMember]
+        public string description { get; set; }
+
+        [DataMember]
+        public string privacy { get; set; }
+
+        [DataMember]
+        public string mugshot_redirect_url_template { get; set; }
+
+        [DataMember]
+        public string url { get; set; }
+
+        [DataMember]
+        public string web_url { get; set; }
+
+        [DataMember]
+        public string activated_at { get; set; }
+
+        [DataMember]
+        public string members { get; set; }
+
+        [DataMember]
+        public string header_image_url { get; set; }
+
+        [DataMember]
+        public string category { get; set; }
+
+        [DataMember]
+        public string default_thread_starter_type { get; set; }
+
+        [DataMember]
+        public string color { get; set; }
+
+        [DataMember]
+        public bool external { get; set; }
+
+        [DataMember]
+        public bool moderated { get; set; }
+
+        [DataMember]
+        public bool restricted_posting { get; set; }
+
+        [DataMember]
+        public bool company_group { get; set; }
+
+        [DataMember]
+        public bool auto_activated { get; set; }
+
+        [DataMember]
+        public bool show_in_directory { get; set; }
+
+        [DataMember]
+        public Stats stats { get; set; }
+
+        [DataMember]
+        public string email { get; set; }
+
+        [DataMember]
+        public bool aad_guest { get; set; }
+
+        [DataMember]
+        public string[] topics { get; set; }
+
+        [DataMember]
+        public string[] invited_user_ids { get; set; }
+
+        [DataMember]
+        public bool read_only { get; set; }
+
+        [DataMember]
+        public bool reply_disabled { get; set; }
+
+        [DataMember]
+        public bool has_attachments { get; set; }
+
+        [DataMember]
+        public bool direct_message { get; set; }
+
+        [DataMember]
+        public bool announcement { get; set; }
+
+        [DataMember]
+        public string group_id { get; set; }
+
+        [DataMember]
+        public string thread_starter_id { get; set; }
+
+    }
+
+    [Serializable]
+    [DataContract]
+    public class Stats
+    {
+        [DataMember]
+        public string following { get; set; }
+
+        [DataMember]
+        public string followers { get; set; }
+
+        [DataMember]
+        public string updates { get; set; }
+
+    }
+
+    [Serializable]
+    [DataContract]
+    public class likedBy
+    {
+        [DataMember]
+        public string count { get; set; }
+
+        [DataMember]
+        public string[] names { get; set; }
+    }
+
+
+    [Serializable]
+    [DataContract]
+    public class Attachment
+    {
+        [DataMember]
+        public string id { get; set; }
+
+        [DataMember]
+        public string network_id { get; set; }
+
+        [DataMember]
+        public string url { get; set; }
+
+        [DataMember]
+        public string web_url { get; set; }
+
+        [DataMember]
+        public string type { get; set; }
+
+        [DataMember]
+        public string name { get; set; }
+
+        [DataMember]
+        public string original_name { get; set; }
+
+        [DataMember]
+        public string full_name { get; set; }
+
+        [DataMember]
+        public string description { get; set; }
+
+        [DataMember]
+        public string content_type { get; set; }
+
+        [DataMember]
+        public string content_class { get; set; }
+
+        [DataMember]
+        public string created_at { get; set; }
+
+        [DataMember]
+        public string owner_id { get; set; }
+
+        [DataMember]
+        public string official { get; set; }
+
+        [DataMember]
+        public string storage_type { get; set; }
+
+        [DataMember]
+        public string target_type { get; set; }
+
+        [DataMember]
+        public string storage_state { get; set; }
+
+        [DataMember]
+        public string sharepoint_id { get; set; }
+
+        [DataMember]
+        public string sharepoint_web_url { get; set; }
+
+        [DataMember]
+        public string small_icon_url { get; set; }
+
+        [DataMember]
+        public string large_icon_url { get; set; }
+
+        [DataMember]
+        public string download_url { get; set; }
+
+        [DataMember]
+        public string thumbnail_url { get; set; }
+
+        [DataMember]
+        public string preview_url { get; set; }
+
+        [DataMember]
+        public string large_preview_url { get; set; }
+
+        [DataMember]
+        public string size { get; set; }
+
+        [DataMember]
+        public string owner_type { get; set; }
+
+        [DataMember]
+        public string last_uploaded_at { get; set; }
+
+        [DataMember]
+        public string last_uploaded_by_id { get; set; }
+
+        [DataMember]
+        public string last_uploaded_by_type { get; set; }
+
+        [DataMember]
+        public string uuid { get; set; }
+
+        [DataMember]
+        public string transcoded { get; set; }
+
+        [DataMember]
+        public string streaming_url { get; set; }
+
+        [DataMember]
+        public string path { get; set; }
+
+        [DataMember]
+        public string y_id { get; set; }
+
+        [DataMember]
+        public string overlay_url { get; set; }
+
+        [DataMember]
+        public string privacy { get; set; }
+
+        [DataMember]
+        public string group_id { get; set; }
+
+        [DataMember]
+        public string height { get; set; }
+
+        [DataMember]
+        public string width { get; set; }
+
+        [DataMember]
+        public string scaled_url { get; set; }
+
+        [DataMember]
+        public string latest_version_id { get; set; }
+
+        [DataMember]
+        public string status { get; set; }
+
+        [DataMember]
+        public string real_type { get; set; }
+
+        [DataMember]
+        public Image image { get; set; }
+
+        [DataMember]
+        public Ymodule ymodule { get; set; }
+
+    }
+
+
+    [Serializable]
+    [DataContract]
+    public class Ymodule
+    {
+        [DataMember]
+        public string web_app_id { get; set; }
+
+        [DataMember]
+        public string app_id { get; set; }
+
+        [DataMember]
+        public string icon_url { get; set; }
+
+    }
+
+    [Serializable]
+    [DataContract]
+    public class Image
+    {
+       [DataMember]
+        public string url { get; set; }
+
+        [DataMember]
+        public string size { get; set; }
+
+        [DataMember]
+        public string thumbnail_url { get; set; }
+    }
+
+    [Serializable]
+    [DataContract]
+    public class GroupMessagesRespone
+    {
+        [DataMember]
+        public ThreadedExtended threaded_extended { get; set; }
+
+        [DataMember]
+        public Announcement[] messages { get; set; }
+
+        [DataMember]
+        public References[] references { get; set; }
+
+        [DataMember]
+        public string[] external_references { get; set; }
+
+        [DataMember]
+        public Meta meta { get; set; }
+
+        //[DataMember]
+        //public Attachment[] attachments { get; set; }
+
+    }
+
+    [Serializable]
+    [DataContract]
+    public class Meta
+    {
+        [DataMember]
+        public bool older_available { get; set; }
+
+        [DataMember]
+        public string requested_poll_interval { get; set; }
+
+        [DataMember]
+        public RealTime realtime { get; set; }
+
+        [DataMember]
+        public string last_seen_message_id { get; set; }
+
+        [DataMember]
+        public string current_user_id { get; set; }
+
+        [DataMember]
+        public string[] followed_references = new string[0];
+
+        [DataMember]
+        public string[] ymodules { get; set; }
+
+        [DataMember]
+        public NMD newest_message_details { get; set; }
+
+        [DataMember]
+        public string feed_name { get; set; }
+
+        [DataMember]
+        public string feed_desc { get; set; }
+
+        [DataMember]
+        public bool direct_from_body { get; set; }
+
+
+    }
+
+    [Serializable]
+    [DataContract]
+    public class NMD
+    {
+        [DataMember]
+        public string id { get; set; }
+
+        [DataMember]
+        public string thread_id { get; set; }
+
+        [DataMember]
+        public bool thread_starter { get; set; }
+    }
+
+
+    [Serializable]
+    [DataContract]
+    public class RealTime
+    {
+        [DataMember]
+        public string uri { get; set; }
+
+        [DataMember]
+        public string authentication_token { get; set; }
+
+        [DataMember]
+        public string channel_id { get; set; }
+    }
+
+
+
+    [Serializable]
+    [DataContract]
+    public class ThreadedExtended
+    {
+        [DataMember]
+        public string id { get; set; }
+
+    }
+
+}
